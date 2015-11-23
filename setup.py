@@ -18,22 +18,15 @@ import os
 from setuptools import setup
 
 
-# Utility function to read the README file.
-# Used for the long_description.  It's nice, because now 1) we have a top level
-# README file and 2) it's easier to type in the README file than to put a raw
-# string in below ...
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
-
-data = {
+setup(**{
     'name': 'django-rrd',
-    'version': '0.0.7',
+    'version': '0.0.8',
     'author': 'Okami',
     'author_email': 'okami@fuzetsu.info',
     'description': 'Web frontend to RRDtool based on Django',
     'license': 'GPLv3',
     'keywords': 'django rrd rrdtool',
-    'url': 'https://github.com/okami-1/django-rrd',
+    'url': 'https://sourceforge.net/p/django-rrd/wiki/',
     'packages': [
         'djangorrd',
         'djangorrd.migrations',
@@ -51,6 +44,4 @@ data = {
         'Django >= 1.8.4',
         'python-rrdtool >= 1.4.7',
     ],
-}
-
-setup(**data)
+})
